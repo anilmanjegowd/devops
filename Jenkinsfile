@@ -4,16 +4,19 @@ pipeline
     stages
     {
         stage('build')
-        { steps{
-            sh 'pwd'
-        }
+        {   
+            steps {
+
+                     sh 'pwd'
+                   }
         }
 
          stage('test')
-         { steps {
+         {
+             steps {
              
                 sh 'sleep 10'
-        } 
+                    } 
         }
     }  
     
