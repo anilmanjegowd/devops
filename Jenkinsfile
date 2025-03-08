@@ -5,7 +5,7 @@ pipeline
     }
     stages
     {
-        stage('build')
+        stage('build ')
         {   
             steps {
 
@@ -13,12 +13,24 @@ pipeline
                    }
         }
 
-         stage('test')
-         {
-             steps {
+         stage('test_multiple')
+         { 
+            parallel {
+
+             stage('test1'){
+                steps {
              
                 sh 'sleep 10'
-                    } 
+                  }
+                        } 
+
+                         stage('test2'){
+                steps {
+             
+                sh 'ls'
+                  }
+                        } s
+                              } 
         }
     }  
     
