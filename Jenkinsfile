@@ -24,12 +24,12 @@ pipeline
                   }
                         } 
 
-                         stage('test2'){
+                         stage('test2') {
                 steps {
              
                 sh 'ls'
                   }
-                        } s
+                        } 
                               } 
         }
     }  
